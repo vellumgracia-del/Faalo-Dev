@@ -102,6 +102,7 @@
             </div>
             
             <!-- Ikon GitHub (seperti di video) -->
+            <!-- PANDUAN: GANTI LINK GITHUB DI HEADER -->
             <a href="#" class="hidden md:block text-2xl text-gray-300 hover:text-indigo-500 transition-colors">
                 <i class="fab fa-github"></i>
             </a>
@@ -131,15 +132,19 @@
                     </p>
                     
                     <div class="mt-10 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4">
-                        <!-- Hanya menyisakan tombol CV yang menonjol -->
+                        <!-- PANDUAN: GANTI LINK DOWNLOAD CV DI SINI -->
                         <a href="#" class="w-full md:w-auto inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105">
                             Download CV
                         </a>
                     </div>
                     
+                    <!-- PANDUAN: GANTI LINK SOSIAL MEDIA DI SINI -->
                     <div class="mt-10 flex justify-center md:justify-start space-x-6">
+                        <!-- LINKEDIN -->
                         <a href="#" class="text-3xl text-gray-400 hover:text-indigo-500 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                        <!-- INSTAGRAM -->
                         <a href="#" class="text-3xl text-gray-400 hover:text-indigo-500 transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+                        <!-- GITHUB -->
                         <a href="#" class="text-3xl text-gray-400 hover:text-indigo-500 transition-colors duration-300"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
@@ -148,12 +153,14 @@
                 <div class="relative flex justify-center items-center h-96 md:order-2">
                     <!-- Avatar Utama -->
                     <div class="relative z-10">
+                        <!-- PANDUAN: GANTI FOTO PROFIL DI BAWAH INI -->
+                        <!-- Ubah link di dalam src="..." dengan link gambar Anda (resolusi 320x320 sangat disarankan) -->
                         <img src="https://placehold.co/320x320/2a2a2e/ffffff?text=faalo" 
                              alt="faalo Avatar"
                              class="w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-indigo-500 shadow-[0_0_60px_10px_rgba(99,102,241,0.3)]">
                     </div>
                     
-                    <!-- Ikon Mengambang -->
+                    <!-- Ikon Mengambang (Tidak perlu diubah) -->
                     <div class="absolute top-10 left-10 float-anim" style="animation-delay: 0s;">
                         <span class="text-5xl opacity-50">S</span>
                     </div>
@@ -185,6 +192,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     <!-- Kolom Kiri: Deskripsi & Skills -->
                     <div>
+                        <!-- PANDUAN: UBAH TEKS DESKRIPSI DIRI DI BAWAH INI -->
                         <p class="text-gray-400 text-lg leading-relaxed mb-8">
                             I'm faalo, a computer science student exploring diverse fields of
                             technology - from software and web development to artificial intelligence
@@ -193,6 +201,7 @@
                         </p>
                         
                         <h3 class="text-2xl font-semibold text-white mb-6">Skills & Technologies</h3>
+                        <!-- PANDUAN: UBAH DAFTAR SKILL DI SINI -->
                         <div class="flex flex-wrap gap-3">
                             <span class="bg-gray-800 text-gray-300 px-4 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors cursor-default">HTML5</span>
                             <span class="bg-gray-800 text-gray-300 px-4 py-2 rounded-md font-medium hover:bg-indigo-600 hover:text-white transition-colors cursor-default">CSS3</span>
@@ -232,111 +241,132 @@
             
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 
-                <!-- Project Card 1 -->
+                <!-- Project Card 1: Belajar-Bareng -->
                 <div class="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/333/fff?text=E-Commerce+Platform" alt="Project 1" class="w-full h-52 object-cover">
+                    
+                    <!-- PANDUAN: GANTI FOTO PROJECT (1/6) -->
+                    <img src="https://placehold.co/600x400/333/fff?text=Belajar-Bareng" alt="Project Belajar-Bareng" class="w-full h-52 object-cover">
+                    
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">E-Commerce Platform</h3>
-                        <p class="text-gray-400 text-sm mb-6 h-20">A complete e-commerce platform with shopping cart, payment, and admin dashboard features.</p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">Belajar-Bareng</h3>
+                        <!-- PANDUAN: GANTI DESKRIPSI PROJECT (1/6) -->
+                        <p class="text-gray-400 text-sm mb-6 h-20">Aplikasi atau platform untuk sesi belajar bersama dan berbagi materi antar mahasiswa atau rekan kerja.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">React</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Node.js</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">MongoDB</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Web Development</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Collaboration</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">GitHub</a>
+                            <!-- PANDUAN: GANTI LINK LIVE DEMO PROJECT (1/6) -->
+                            <a href="https://vellumgracia-del.github.io/Belajar-Bareng/ " class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project Card 2 -->
+                <!-- Project Card 2: bb -->
                 <div class="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/333/fff?text=Portfolio+Website" alt="Project 2" class="w-full h-52 object-cover">
+                    
+                    <!-- PANDUAN: GANTI FOTO PROJECT (2/6) -->
+                    <img src="https://placehold.co/600x400/333/fff?text=bb" alt="Project bb" class="w-full h-52 object-cover">
+                    
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">Portfolio Website</h3>
-                        <p class="text-gray-400 text-sm mb-6 h-20">An interactive portfolio website with animations and responsive design to showcase work.</p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">Perpustakaan Digital</h3>
+                        <!-- PANDUAN: GANTI DESKRIPSI PROJECT (2/6) -->
+                        <p class="text-gray-400 text-sm mb-6 h-20">Deskripsi singkat atau singkatan untuk proyek terkait Belajar atau Bantuan.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">HTML</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">CSS</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Mobile-First</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Utility</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">GitHub</a>
+                            <!-- PANDUAN: GANTI LINK LIVE DEMO PROJECT (2/6) -->
+                            <a href="https://vellumgracia-del.github.io/PerpusDigital/" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 3 -->
+                <!-- Project Card 3: KasirPro -->
                 <div class="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/333/fff?text=Task+Management+App" alt="Project 3" class="w-full h-52 object-cover">
+                    
+                    <!-- PANDUAN: GANTI FOTO PROJECT (3/6) -->
+                    <img src="https://placehold.co/600x400/333/fff?text=KasirPro" alt="Project KasirPro" class="w-full h-52 object-cover">
+                    
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">Task Management App</h3>
-                        <p class="text-gray-400 text-sm mb-6 h-20">A task management application with drag-and-drop and real-time collaboration features.</p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">KasirPro</h3>
+                        <!-- PANDUAN: GANTI DESKRIPSI PROJECT (3/6) -->
+                        <p class="text-gray-400 text-sm mb-6 h-20">Aplikasi Point-of-Sale (POS) profesional untuk mengelola transaksi, inventaris, dan laporan penjualan.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Vue.js</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Firebase</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Tailwind CSS</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">POS System</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Database Management</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">GitHub</a>
+                            <!-- PANDUAN: GANTI LINK LIVE DEMO PROJECT (3/6) -->
+                            <a href="https://vellumgracia-del.github.io/KasirPro/ " class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 4 (tambahan) -->
+                <!-- Project Card 4: Sekolah -->
                 <div class="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/333/fff?text=Weather+Dashboard" alt="Project 4" class="w-full h-52 object-cover">
+                    
+                    <!-- PANDUAN: GANTI FOTO PROJECT (4/6) -->
+                    <img src="https://placehold.co/600x400/333/fff?text=Sekolah" alt="Project Sekolah" class="w-full h-52 object-cover">
+                    
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">Weather Dashboard</h3>
-                        <p class="text-gray-400 text-sm mb-6 h-20">An interactive dashboard with location-based forecasts, weather maps, and historical data visualization.</p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">Website Sekolah</h3>
+                        <!-- PANDUAN: GANTI DESKRIPSI PROJECT (4/6) -->
+                        <p class="text-gray-400 text-sm mb-6 h-20">Sistem informasi manajemen sekolah (SIMS) untuk administrasi, nilai siswa, dan jadwal pelajaran.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">JavaScript</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">OpenWeather API</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Education Tech</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Management System</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">GitHub</a>
+                            <!-- PANDUAN: GANTI LINK LIVE DEMO PROJECT (4/6) -->
+                            <a href="https://vellumgracia-del.github.io/Sekolah/" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 5 (tambahan) -->
+                <!-- Project Card 5: Bisnis-Kita -->
                 <div class="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/333/fff?text=Social+Media+Analytics" alt="Project 5" class="w-full h-52 object-cover">
+                    
+                    <!-- PANDUAN: GANTI FOTO PROJECT (5/6) -->
+                    <img src="https://placehold.co/600x400/333/fff?text=Bisnis-Kita" alt="Project Bisnis-Kita" class="w-full h-52 object-cover">
+                    
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">Social Media Analytics</h3>
-                        <p class="text-gray-400 text-sm mb-6 h-20">A comprehensive social media management dashboard with analytics, scheduling, and multi-platform integration.</p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">Kalkulator Pengusaha</h3>
+                        <!-- PANDUAN: GANTI DESKRIPSI PROJECT (5/6) -->
+                        <p class="text-gray-400 text-sm mb-6 h-20">Platform manajemen bisnis kecil (SME) yang meliputi CRM, akuntansi dasar, dan manajemen tugas.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">React</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Express.js</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">SME Tools</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">CRM</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">GitHub</a>
+                            <!-- PANDUAN: GANTI LINK LIVE DEMO PROJECT (5/6) -->
+                            <a href="https://vellumgracia-del.github.io/Kalkulator-Pengusaha/ " class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project Card 6 (tambahan) -->
+                <!-- Project Card 6: Amaranggana_Group -->
                 <div class="bg-gray-900 border border-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
-                    <img src="https://placehold.co/600x400/333/fff?text=Blog+Platform" alt="Project 6" class="w-full h-52 object-cover">
+                    
+                    <!-- PANDUAN: GANTI FOTO PROJECT (6/6) -->
+                    <img src="https://placehold.co/600x400/333/fff?text=Amaranggana_Group" alt="Project Amaranggana_Group" class="w-full h-52 object-cover">
+                    
                     <div class="p-6">
-                        <h3 class="text-2xl font-semibold text-white mb-3">Blog Platform</h3>
-                        <p class="text-gray-400 text-sm mb-6 h-20">A full-featured blog platform with CMS capabilities, user management, and SEO optimization features.</p>
+                        <h3 class="text-2xl font-semibold text-white mb-3">Amaranggana Group</h3>
+                        <!-- PANDUAN: GANTI DESKRIPSI PROJECT (6/6) -->
+                        <p class="text-gray-400 text-sm mb-6 h-20">Situs web resmi atau sistem internal untuk sebuah kelompok/organisasi bernama Amaranggana Group.</p>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Next.js</span>
-                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Corporate Website</span>
+                            <span class="bg-gray-800 text-xs px-3 py-1 rounded-full">Branding</span>
                         </div>
                         <div class="flex space-x-4">
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
-                            <a href="#" class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">GitHub</a>
+                            <!-- PANDUAN: GANTI LINK LIVE DEMO PROJECT (6/6) -->
+                            <a href="https://vellumgracia-del.github.io/Amaranggana_Group/ " class="px-5 py-2 text-sm bg-gray-800 text-gray-300 rounded-md hover:bg-indigo-600 hover:text-white transition-colors">Live Demo</a>
                         </div>
                     </div>
                 </div>
-
+                
             </div>
         </section>
 
@@ -353,10 +383,12 @@
                         </p>
                         
                         <div class="space-y-6">
+                            <!-- PANDUAN: GANTI ALAMAT EMAIL -->
                             <div class="flex items-center space-x-4">
                                 <i class="fas fa-envelope text-2xl text-indigo-500 w-8 text-center"></i>
                                 <span class="text-gray-300 text-lg">faalocodes@example.com</span>
                             </div>
+                            <!-- PANDUAN: GANTI NOMOR TELEPON -->
                             <div class="flex items-center space-x-4">
                                 <i class="fas fa-phone text-2xl text-indigo-500 w-8 text-center"></i>
                                 <span class="text-gray-300 text-lg">+6281122334</span>
@@ -367,9 +399,13 @@
                             </div>
                         </div>
 
+                        <!-- PANDUAN: GANTI LINK SOSIAL MEDIA DI BAWAH INI (Bagian Contact) -->
                         <div class="mt-12 flex space-x-6">
+                            <!-- LINKEDIN -->
                             <a href="#" class="text-3xl text-gray-400 hover:text-indigo-500 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                            <!-- INSTAGRAM -->
                             <a href="#" class="text-3xl text-gray-400 hover:text-indigo-500 transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+                            <!-- GITHUB -->
                             <a href="#" class="text-3xl text-gray-400 hover:text-indigo-500 transition-colors duration-300"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
@@ -409,6 +445,7 @@
     <!-- ===== FOOTER ===== -->
     <footer class="py-10 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            <!-- PANDUAN: GANTI TAHUN DAN NAMA DI FOOTER -->
             <p>&copy; 2025 Faalo-dev. Dibuat dengan penuh semangat.</p>
         </div>
     </footer>
