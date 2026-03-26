@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import Image from "next/image";
+import { urlForImage } from "@/sanity/lib/image";
 
 interface Project {
+  _id: string;
   title: string;
   description: string;
   tags: string[];
@@ -11,70 +14,12 @@ interface Project {
   githubUrl: string;
   gradient: string;
   icon: string;
+  image?: any;
 }
 
-const projects: Project[] = [
-  {
-    title: "Belajar-Bareng",
-    description:
-      "Platform kolaboratif untuk sesi belajar bersama dan berbagi materi antar mahasiswa atau rekan kerja.",
-    tags: ["Web Development", "Collaboration"],
-    liveUrl: "https://vellumgracia-del.github.io/Belajar-Bareng/",
-    githubUrl: "https://github.com/vellumgracia-del/Belajar-Bareng",
-    gradient: "from-blue-600/20 to-cyan-600/20",
-    icon: "📚",
-  },
-  {
-    title: "Perpustakaan Digital",
-    description:
-      "Aplikasi perpustakaan digital dengan fitur pencarian, katalog buku, dan manajemen peminjaman yang modern.",
-    tags: ["Mobile-First", "Utility"],
-    liveUrl: "https://vellumgracia-del.github.io/PerpusDigital/",
-    githubUrl: "https://github.com/vellumgracia-del/PerpusDigital",
-    gradient: "from-purple-600/20 to-pink-600/20",
-    icon: "📖",
-  },
-  {
-    title: "KasirPro",
-    description:
-      "Aplikasi Point-of-Sale (POS) profesional untuk mengelola transaksi, inventaris, dan laporan penjualan.",
-    tags: ["POS System", "Database Management"],
-    liveUrl: "https://vellumgracia-del.github.io/KasirPro/",
-    githubUrl: "https://github.com/vellumgracia-del/KasirPro",
-    gradient: "from-green-600/20 to-emerald-600/20",
-    icon: "💰",
-  },
-  {
-    title: "Website Sekolah",
-    description:
-      "Sistem informasi manajemen sekolah (SIMS) untuk administrasi, nilai siswa, dan jadwal pelajaran.",
-    tags: ["Education Tech", "Management System"],
-    liveUrl: "https://vellumgracia-del.github.io/Sekolah/",
-    githubUrl: "https://github.com/vellumgracia-del/Sekolah",
-    gradient: "from-orange-600/20 to-yellow-600/20",
-    icon: "🏫",
-  },
-  {
-    title: "Kalkulator Pengusaha",
-    description:
-      "Platform manajemen bisnis kecil (SME) meliputi CRM, akuntansi dasar, dan manajemen tugas.",
-    tags: ["SME Tools", "CRM"],
-    liveUrl: "https://vellumgracia-del.github.io/Kalkulator-Pengusaha/",
-    githubUrl: "https://github.com/vellumgracia-del/Kalkulator-Pengusaha",
-    gradient: "from-red-600/20 to-rose-600/20",
-    icon: "📊",
-  },
-  {
-    title: "Amaranggana Group",
-    description:
-      "Website resmi perusahaan Amaranggana Group dengan landing page modern, profil, dan layanan.",
-    tags: ["Corporate Website", "Branding"],
-    liveUrl: "https://vellumgracia-del.github.io/Amaranggana_Group/",
-    githubUrl: "https://github.com/vellumgracia-del/Amaranggana_Group",
-    gradient: "from-indigo-600/20 to-violet-600/20",
-    icon: "🌾",
-  },
-];
+interface ProjectsProps {
+  projects: Project[];
+}
 
 const containerVariants = {
   hidden: {},
@@ -93,7 +38,7 @@ const cardVariants = {
   },
 };
 
-export default function Projects() {
+export default function Projects({ projects = [] }: ProjectsProps) {
   return (
     <section
       id="projects"
@@ -128,28 +73,37 @@ export default function Projects() {
       >
         {projects.map((project) => (
           <motion.div
-            key={project.title}
+            key={project._id}
             variants={cardVariants}
             whileHover={{ y: -8, transition: { duration: 0.3 } }}
             className="group relative bg-[#0d0d14] border border-white/5 rounded-2xl overflow-hidden"
           >
-            {/* Card Top Gradient */}
+            {/* Card Top Gradient or Image */}
             <div
               className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}
             >
-              {/* Pattern Overlay */}
-              <div className="absolute inset-0 opacity-10" style={{
-                backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-                backgroundSize: "20px 20px",
-              }} />
-              
-              <motion.span
-                className="text-6xl relative z-10"
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                {project.icon}
-              </motion.span>
+              {project.image ? (
+                <Image
+                  src={urlForImage(project.image).url()}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              ) : (
+                <>
+                  <div className="absolute inset-0 opacity-10" style={{
+                    backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+                    backgroundSize: "20px 20px",
+                  }} />
+                  <motion.span
+                    className="text-6xl relative z-10"
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    {project.icon}
+                  </motion.span>
+                </>
+              )}
 
               {/* Hover Glow */}
               <div className="absolute inset-0 bg-indigo-500/0 group-hover:bg-indigo-500/10 transition-colors duration-500" />
