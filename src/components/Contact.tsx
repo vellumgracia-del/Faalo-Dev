@@ -13,8 +13,8 @@ import {
 } from "react-icons/fa";
 
 const contactInfo = [
-  { icon: FaEnvelope, text: "faalocodes@example.com", href: "mailto:faalocodes@example.com" },
-  { icon: FaPhone, text: "+6281122334", href: "tel:+6281122334" },
+  { icon: FaEnvelope, text: "faalodev@gmail.com", href: "mailto:faalodev@gmail.com" },
+  { icon: FaPhone, text: "+6288291079026", href: "tel:+6288291079026" },
   { icon: FaMapMarkerAlt, text: "Indonesia", href: null },
 ];
 
