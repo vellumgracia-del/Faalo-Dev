@@ -23,9 +23,8 @@ export default function Footer() {
           transition={{ delay: 0.2 }}
         >
           &copy; {new Date().getFullYear()}{" "}
-          <span className="text-gray-400">Faalo-dev</span>. Dibuat dengan penuh
-          semangat{" "}
-          <span className="text-indigo-400">✦</span>
+          <span className="text-gray-400">Faalo-dev</span>. {" "}
+          <span className="text-indigo-400"></span>
         </motion.p>
       </div>
     </motion.footer>
