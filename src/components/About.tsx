@@ -5,6 +5,7 @@ import { type IconType } from "react-icons";
 import {
   SiHtml5, SiCss, SiJavascript, SiTypescript, SiReact,
   SiNextdotjs, SiNodedotjs, SiGit, SiFirebase, SiTailwindcss,
+  SiVite, SiSupabase, SiPrisma, SiSanity, SiVercel, SiNetlify
 } from "react-icons/si";
 import { FaMobileAlt, FaPaintBrush } from "react-icons/fa";
 
@@ -27,6 +28,12 @@ const skills: Skill[] = [
   { name: "UI/UX", icon: FaPaintBrush, color: "#A78BFA" },
   { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
   { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "Vite", icon: SiVite, color: "#646CFF" },
+  { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
+  { name: "Prisma", icon: SiPrisma, color: "#2D3748" },
+  { name: "Sanity", icon: SiSanity, color: "#F03E2F" },
+  { name: "Vercel", icon: SiVercel, color: "#FFFFFF" },
+  { name: "Netlify", icon: SiNetlify, color: "#00C7B7" },
 ];
 
 const fadeInLeft: Variants = {

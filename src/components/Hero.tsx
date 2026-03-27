@@ -231,8 +231,8 @@ export default function Hero() {
             className="mt-10 flex justify-center md:justify-start space-x-6"
           >
             {[
-              { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-              { icon: FaInstagram, href: "#", label: "Instagram" },
+              { icon: FaLinkedin, href: "https://www.linkedin.com/in/zulfa-fahmiy-924a19362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn" },
+              { icon: FaInstagram, href: "https://www.instagram.com/z.faalo?igsh=NjZrejIxcm85OWFv", label: "Instagram" },
               { icon: FaGithub, href: "https://github.com/vellumgracia-del", label: "GitHub" },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
