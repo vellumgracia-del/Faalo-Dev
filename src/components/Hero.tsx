@@ -7,7 +7,7 @@ import { FaLinkedin, FaInstagram, FaGithub, FaDownload } from "react-icons/fa";
 import { SiHtml5, SiCss, SiJavascript, SiReact, SiNextdotjs, SiTypescript, SiNodedotjs, SiGit } from "react-icons/si";
 import { type IconType } from "react-icons";
 
-const words = ["Problem Solver", "Code Explorer", "AI Explorer", "Innovator"];
+const words = ["Problem Solver", "Code Explorer", "AI Explorer", "Web Developer"];
 
 interface FloatingIcon {
   icon: IconType;
