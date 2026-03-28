@@ -34,13 +34,47 @@ const fadeInUp = {
 };
 
 export default function Contact() {
-  const [formStatus, setFormStatus] = useState<"idle" | "success">("idle");
+  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormStatus("success");
-    (e.target as HTMLFormElement).reset();
-    setTimeout(() => setFormStatus("idle"), 3000);
+    setFormStatus("submitting");
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    // Kunci API Web3Forms (Akan diambil dari .env.local)
+    formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "");
+    
+    // Opsional: mencegah captcha Web3Forms menampilkan halaman redirect
+    formData.append("subject", "New Contact from Portfolio!");
+    formData.append("from_name", "Portfolio Notification");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: json,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormStatus("success");
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setFormStatus("error");
+      }
+    } catch (error) {
+      console.error(error);
+      setFormStatus("error");
+    }
+
+    setTimeout(() => setFormStatus("idle"), 5000);
   };
 
   return (
@@ -155,14 +189,15 @@ export default function Contact() {
 
             <motion.button
               type="submit"
-              className="w-full relative group px-8 py-3.5 bg-indigo-600 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              disabled={formStatus === "submitting"}
+              className={`w-full relative group px-8 py-3.5 bg-indigo-600 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 ${formStatus === "submitting" ? "opacity-70 cursor-not-allowed" : ""}`}
+              whileHover={formStatus !== "submitting" ? { scale: 1.02 } : {}}
+              whileTap={formStatus !== "submitting" ? { scale: 0.98 } : {}}
             >
               <span className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <FaPaperPlane />
-                SEND MESSAGE
+                {formStatus === "submitting" ? "SENDING..." : "SEND MESSAGE"}
               </span>
             </motion.button>
 
@@ -173,7 +208,18 @@ export default function Contact() {
                 exit={{ opacity: 0, y: -10 }}
                 className="text-center text-green-400 py-2 px-4 bg-green-500/10 rounded-lg border border-green-500/20"
               >
-                ✨ Message sent successfully! (Demo)
+                ✨ Pesan berhasil dikirim ke Email Anda!
+              </motion.div>
+            )}
+
+            {formStatus === "error" && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="text-center text-red-400 py-2 px-4 bg-red-500/10 rounded-lg border border-red-500/20"
+              >
+                Gagal mengirim pesan. Pastikan Access Key sudah benar.
               </motion.div>
             )}
           </motion.form>
